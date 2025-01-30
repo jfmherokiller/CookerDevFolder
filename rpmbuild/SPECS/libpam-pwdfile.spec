@@ -1,5 +1,5 @@
 Name:     libpam-pwdfile
-Version:  1.1
+Version:  1.0
 Release:  1%{?dist}
 Summary:  PAM module to authenticate against a password file
 

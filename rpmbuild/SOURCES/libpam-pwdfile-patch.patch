@@ -1,0 +1,21 @@
+diff -up libpam-pwdfile/bigcrypt.c.fix libpam-pwdfile/bigcrypt.c
+--- libpam-pwdfile/bigcrypt.c.fix	2025-01-31 18:45:35.915461024 -0600
++++ libpam-pwdfile/bigcrypt.c	2025-01-31 19:05:05.975443637 -0600
+@@ -27,7 +27,7 @@
+ #define _XOPEN_SOURCE 700
+ #include <unistd.h>
+ #include <string.h>
+-
++#include <crypt.h>
+ #include "bigcrypt.h"
+ 
+ /*
+diff -up libpam-pwdfile/Makefile.fix libpam-pwdfile/Makefile
+--- libpam-pwdfile/Makefile.fix	2025-01-31 18:45:35.915461024 -0600
++++ libpam-pwdfile/Makefile	2025-01-31 19:17:02.588766317 -0600
+@@ -1,4 +1,4 @@
+-PAM_LIB_DIR ?= /lib/security
++PAM_LIB_DIR ?= /usr/lib64/security
+ INSTALL ?= install
+ CFLAGS ?= -O2 -g -Wall -Wformat-security
+ 

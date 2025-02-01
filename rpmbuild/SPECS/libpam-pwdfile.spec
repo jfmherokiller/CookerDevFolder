@@ -9,12 +9,13 @@ Source0:  https://github.com/tiwe-de/libpam-pwdfile/archive/v%{version}/libpam-p
 #Source0: libpam-pwdfile-1.0.tar.gz
 BuildRequires:  pam-devel
 BuildRequires:  glibc-devel
+Patch: libpam-pwdfile-patch.patch
 Group: Faker
 %description
 %{summary}
 
 %prep
-%autosetup -n %{name}-%{version}
+%autosetup -p1
 
 %build
 make %{?_smp_mflags}

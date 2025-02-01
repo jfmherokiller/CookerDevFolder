@@ -18,10 +18,10 @@ Group: Faker
 %autosetup -p1
 
 %build
-make %{?_smp_mflags}
+%make_build
 
 %install
-make DESTDIR=%{buildroot} install
+%make_install
 
 %files
 %{_libdir}/security/pam_pwdfile.so

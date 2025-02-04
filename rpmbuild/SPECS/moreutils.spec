@@ -2,7 +2,7 @@
 
 Name:     moreutils
 Version:  0.69
-Release:  1%{?dist}
+Release:  1
 Summary:  Additional Unix utilities
 License:  GPLv2+
 
@@ -31,34 +31,10 @@ Group: Faker
 %make_install
 
 %files
-%{_bindir}/isutf8
-%{_bindir}/ifdata 
-%{_bindir}/ifne 
-%{_bindir}/pee 
-%{_bindir}/sponge 
-%{_bindir}/mispipe 
-%{_bindir}/lckdo 
-%{_bindir}/parallel 
-%{_bindir}/errno
-%{_bindir}/vidir 
-%{_bindir}/vipe 
-%{_bindir}/ts 
-%{_bindir}/combine 
-%{_bindir}/zrun 
-%{_bindir}/chronic
+%{_bindir}/*
+%{_mandir}/man1/*.1*
 
-%{_mandir}/man1/sponge.1*
-%{_mandir}/man1/vidir.1*
-%{_mandir}/man1/vipe.1*
-%{_mandir}/man1/isutf8.1*
-%{_mandir}/man1/ts.1*
-%{_mandir}/man1/combine.1*
-%{_mandir}/man1/ifdata.1*
-%{_mandir}/man1/ifne.1* 
-%{_mandir}/man1/pee.1*
-%{_mandir}/man1/zrun.1* 
-%{_mandir}/man1/chronic.1* 
-%{_mandir}/man1/mispipe.1* 
-%{_mandir}/man1/lckdo.1*
-%{_mandir}/man1/parallel.1*
-%{_mandir}/man1/errno.1*
+# This will instal README in the correct loaction
+%doc README
+# And this the license
+%license COPYING

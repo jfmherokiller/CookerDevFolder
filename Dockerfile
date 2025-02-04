@@ -8,8 +8,5 @@ RUN dnf install -y \
     rpmlint \
     packaging-tools \
     man \
-    locales-en \
-    myspell-en \
-    hunspell && \
     dnf clean all
 ENTRYPOINT [ "/MagicScript.sh" ]

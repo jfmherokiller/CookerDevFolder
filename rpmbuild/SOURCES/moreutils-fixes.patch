@@ -1,0 +1,12 @@
+diff -up moreutils-0.69/Makefile.fix moreutils-0.69/Makefile
+--- moreutils-0.69/Makefile.fix	2024-02-25 13:47:01.000000000 -0600
++++ moreutils-0.69/Makefile	2025-02-04 08:16:29.430853790 -0600
+@@ -8,7 +8,7 @@ PREFIX?=/usr
+ ifneq (,$(findstring CYGWIN,$(shell uname)))
+ 	DOCBOOKXSL?=/usr/share/sgml/docbook/xsl-stylesheets
+ else
+-	DOCBOOKXSL?=/usr/share/xml/docbook/stylesheet/docbook-xsl
++	DOCBOOKXSL?=/usr/share/sgml/docbook/xsl-stylesheets-1.79.2
+ endif
+ 
+ DOCBOOK2XMAN=xsltproc --param man.authors.section.enabled 0 $(DOCBOOKXSL)/manpages/docbook.xsl

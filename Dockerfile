@@ -8,5 +8,5 @@ RUN dnf install -y \
     rpmlint \
     packaging-tools \
     man \
-    dnf clean all
+    && dnf clean all
 ENTRYPOINT [ "/MagicScript.sh" ]
